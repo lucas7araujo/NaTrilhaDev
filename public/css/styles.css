@@ -37,6 +37,7 @@ body {
 
 .inicial__paragrafo {
     font-family: Roboto;
+    width: 90%;
     text-align: center;
     font-size: 1rem;
 }
@@ -81,17 +82,22 @@ body {
 }
 
 .container__icone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: black;
     color: #fff;
     width: 25%;
     font-family: sans-serif;
+    min-height: 210px;
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 2rem;
     margin: 1rem;
     height: auto;
     border-radius: 15px;
-
 }
+
 
 .container__icone i {
     font-size: 3rem;
@@ -160,7 +166,10 @@ body {
 
 .container__quatro {
     background-color: #d4ff1f;
-
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    min-height: 100vh;       
 }
 
 .container__quatro__textos {
@@ -168,7 +177,7 @@ body {
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin: 0 auto;
     padding: 3rem;
 }
 
@@ -272,7 +281,7 @@ body {
     text-align: center;
 }
 
-.inscricao__texto{
+.inscricao__texto {
     background-color: black;
     padding: 2rem;
     margin: 2rem auto;
@@ -309,7 +318,7 @@ body {
 
 .container__icone--invertido i {
     font-size: 3rem;
-    color: #000; 
+    color: #000;
 }
 
 .icone__titulo--invertido {
@@ -322,13 +331,13 @@ body {
     color: #000;
 }
 
-.container__icones{
+.container__icones {
     background-color: #000;
     margin: 0;
     border: 1px solid;
 }
 
-.container__icones__titulo{
+.container__icones__titulo {
     font-size: 2rem;
     color: #fff;
     font-family: sans-serif;
@@ -337,8 +346,8 @@ body {
 }
 
 .botao__contato {
-    background-color: black; 
-    color: #d4ff1f; 
+    background-color: black;
+    color: #d4ff1f;
     border: none;
     padding: 0.8rem 1.2rem;
     border-radius: 8px;
@@ -350,7 +359,7 @@ body {
 /* Container Comunidade */
 
 
-.container__comunidade{
+.container__comunidade {
     background-color: #d4ff1f;
     display: flex;
     flex-direction: column;
@@ -361,9 +370,64 @@ body {
     border-radius: 15px;
 }
 
-.comunidade__titulo{
+.comunidade__titulo {
     color: #000;
     font-family: sans-serif;
     font-weight: bold;
     font-size: 3rem;
+}
+
+/* Responsividade */
+
+@media (max-width: 900px) {
+    .container__icone {
+        width: 60%;
+    }
+
+    .inicial__paragrafo {
+        font-size: 1.1rem;
+    }
+
+    .inicial__inscricao {
+        width: 20%;
+        text-align: center;
+        margin: 0 0 5rem;
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+
+    .container__tres {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container__imagem {
+        width: 50%;
+    }
+
+
+    .container__tres__textos {
+        width: 90%;
+    }
+
+    .botao__cadastro {
+        font-size: 1rem;
+    }
+
+    .container__quatro__textos{
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .inicial__inscricao,
+    .botao__cadastro {
+        width: 40%;
+    }
+
+    .container__imagem {
+        width: 85%;
+    }
 }
